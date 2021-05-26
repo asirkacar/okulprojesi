@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TKNAnaPencere</class>
+ <widget class="QMainWindow" name="TKNAnaPencere">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TKNAnaPencere</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBilgisayar_Par_a_Bilgileri">
+    <property name="title">
+     <string>Bilgisayar Parça Bilgileri</string>
+    </property>
+    <widget class="QMenu" name="menu_retilen_Par_alar">
+     <property name="title">
+      <string>Üretilen Parçalar</string>
+     </property>
+     <addaction name="actionToplu_Par_a_retimi"/>
+    </widget>
+    <addaction name="actionYeni_Par_a_Giri_i"/>
+    <addaction name="actionMevcut_Par_alar"/>
+    <addaction name="separator"/>
+    <addaction name="menu_retilen_Par_alar"/>
+   </widget>
+   <widget class="QMenu" name="menuTedarik_i_Tan_mlar">
+    <property name="title">
+     <string>Tedarikçi Tanımları</string>
+    </property>
+    <addaction name="actionYeni_Tedarik_i_Tan_mlama"/>
+    <addaction name="actionTedarik_iler"/>
+   </widget>
+   <widget class="QMenu" name="menuFatura">
+    <property name="title">
+     <string>Fatura</string>
+    </property>
+    <widget class="QMenu" name="menuAl_Faturas">
+     <property name="title">
+      <string>Alış Faturası</string>
+     </property>
+     <addaction name="actionYeni_Fatura"/>
+     <addaction name="actionFaturalar"/>
+    </widget>
+    <widget class="QMenu" name="menuSat_Faturas">
+     <property name="title">
+      <string>Satış Faturası</string>
+     </property>
+     <addaction name="actionYeni_Fatura_2"/>
+     <addaction name="actionFaturalar_2"/>
+    </widget>
+    <addaction name="menuAl_Faturas"/>
+    <addaction name="menuSat_Faturas"/>
+   </widget>
+   <widget class="QMenu" name="menuM_teri_Tan_mlar">
+    <property name="title">
+     <string>Müşteri Tanımları</string>
+    </property>
+    <addaction name="actionYeni_M_teri"/>
+    <addaction name="actionM_teriler"/>
+   </widget>
+   <addaction name="menuBilgisayar_Par_a_Bilgileri"/>
+   <addaction name="menuTedarik_i_Tan_mlar"/>
+   <addaction name="menuFatura"/>
+   <addaction name="menuM_teri_Tan_mlar"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionYeni_Par_a_Giri_i">
+   <property name="text">
+    <string>Yeni Parça Girişi</string>
+   </property>
+  </action>
+  <action name="actionMevcut_Par_alar">
+   <property name="text">
+    <string>Mevcut Parçalar</string>
+   </property>
+  </action>
+  <action name="actionToplu_Par_a_retimi">
+   <property name="text">
+    <string>Toplu Parça Üretimi</string>
+   </property>
+  </action>
+  <action name="actionYeni_Tedarik_i_Tan_mlama">
+   <property name="text">
+    <string>Yeni Tedarikçi Tanımlama</string>
+   </property>
+  </action>
+  <action name="actionTedarik_iler">
+   <property name="text">
+    <string>Tedarikçiler</string>
+   </property>
+  </action>
+  <action name="actionYeni_Fatura">
+   <property name="text">
+    <string>Yeni Fatura</string>
+   </property>
+  </action>
+  <action name="actionFaturalar">
+   <property name="text">
+    <string>Faturalar</string>
+   </property>
+  </action>
+  <action name="actionYeni_Fatura_2">
+   <property name="text">
+    <string>Yeni Fatura</string>
+   </property>
+  </action>
+  <action name="actionFaturalar_2">
+   <property name="text">
+    <string>Faturalar</string>
+   </property>
+  </action>
+  <action name="actionYeni_M_teri">
+   <property name="text">
+    <string>Yeni Müşteri</string>
+   </property>
+  </action>
+  <action name="actionM_teriler">
+   <property name="text">
+    <string>Müşteriler</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
