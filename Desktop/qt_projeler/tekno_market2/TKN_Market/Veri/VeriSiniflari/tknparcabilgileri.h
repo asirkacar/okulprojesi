@@ -21,6 +21,11 @@ public:
     Metin getParcaOzellikleri() const;
 
 signals:
+    void ParcaIDDegisti(const IdTuru &value);
+    void ParcaMarkasiDegisti(const Metin &value);
+    void ParcaModeliDegisti(const Metin &value);
+    void ParcaTuruDegisti(const ParcaTuru &value);
+    void ParcaOzellikleriDegisti(const Metin &value);
 public slots:
     void setParcaID(const IdTuru &value);
     void setParcaMarkasi(const Metin &value);

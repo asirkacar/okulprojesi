@@ -15,6 +15,7 @@ void TKNParcaBilgileri::setParcaID(const IdTuru &value)
     if(value==ParcaID)
         return;
     ParcaID = value;
+    emit ParcaIDDegisti(ParcaID);
 }
 
 Metin TKNParcaBilgileri::getParcaMarkasi() const
@@ -27,6 +28,7 @@ void TKNParcaBilgileri::setParcaMarkasi(const Metin &value)
     if(value==ParcaMarkasi)
         return;
     ParcaMarkasi = value;
+    emit ParcaMarkasiDegisti(ParcaMarkasi);
 }
 
 Metin TKNParcaBilgileri::getParcaModeli() const
@@ -39,6 +41,7 @@ void TKNParcaBilgileri::setParcaModeli(const Metin &value)
     if(value==ParcaModeli)
         return;
     ParcaModeli = value;
+    emit ParcaModeliDegisti(ParcaModeli);
 }
 
 ParcaTuru TKNParcaBilgileri::getParcaTuru() const
@@ -51,6 +54,7 @@ void TKNParcaBilgileri::setParcaTuru(const ParcaTuru &value)
     if(value==parcaTuru)
         return;
     parcaTuru = value;
+    emit ParcaTuruDegisti(parcaTuru);
 }
 
 Metin TKNParcaBilgileri::getParcaOzellikleri() const
@@ -63,4 +67,5 @@ void TKNParcaBilgileri::setParcaOzellikleri(const Metin &value)
     if(value==ParcaOzellikleri)
         return;
     ParcaOzellikleri = value;
+    emit ParcaOzellikleriDegisti(ParcaOzellikleri);
 }
