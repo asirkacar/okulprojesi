@@ -24,11 +24,11 @@ public:
     void ekle(Ptr parca);
 
     //Listeden parca Silme
-    void sil(IdTuru ParcaID);//hem id göndermeyle
-    void sil(Ptr Parca);//hem ptr adını göndermeyle de kaydeder
+    Ptr sil(IdTuru ParcaID);//hem id göndermeyle
+    Ptr sil(Ptr Parca);//hem ptr adını göndermeyle de kaydeder
 
     //Kopya oluşturma
-    Ptr kopyaOlustur(Ptr kaynak);
+    Ptr kopyaOlustur(Ptr kaynak) const;
 
     //Parca Arama
     Ptr ilkiniBul(Sart f);
