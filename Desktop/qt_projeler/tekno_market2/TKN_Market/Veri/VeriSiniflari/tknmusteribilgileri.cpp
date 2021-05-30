@@ -5,17 +5,17 @@ TKNMusteriBilgileri::TKNMusteriBilgileri(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNMusteriBilgileri::getMusteriId() const
+IdTuru TKNMusteriBilgileri::getId() const
 {
     return musteriId;
 }
 
-void TKNMusteriBilgileri::setMusteriId(const IdTuru &value)
+void TKNMusteriBilgileri::setId(const IdTuru &value)
 {
     if(value==musteriId)
         return;
     musteriId = value;
-    emit MusteriIdDegisti(musteriId);
+    emit idDegisti(musteriId);
 }
 
 Metin TKNMusteriBilgileri::getMusteriAdi() const

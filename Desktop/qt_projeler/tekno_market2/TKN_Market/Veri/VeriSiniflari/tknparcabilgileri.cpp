@@ -5,17 +5,17 @@ TKNParcaBilgileri::TKNParcaBilgileri(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNParcaBilgileri::getParcaID() const
+IdTuru TKNParcaBilgileri::getID() const
 {
     return ParcaID;
 }
 
-void TKNParcaBilgileri::setParcaID(const IdTuru &value)
+void TKNParcaBilgileri::setID(const IdTuru &value)
 {
     if(value==ParcaID)
         return;
     ParcaID = value;
-    emit ParcaIDDegisti(ParcaID);
+    emit IDDegisti(ParcaID);
 }
 
 Metin TKNParcaBilgileri::getParcaMarkasi() const

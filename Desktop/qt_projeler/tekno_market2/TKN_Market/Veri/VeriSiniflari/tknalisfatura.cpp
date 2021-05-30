@@ -5,17 +5,17 @@ TKNAlisFatura::TKNAlisFatura(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNAlisFatura::getAlisFaturaId() const
+IdTuru TKNAlisFatura::getId() const
 {
     return AlisFaturaId;
 }
 
-void TKNAlisFatura::setAlisFaturaId(const IdTuru &value)
+void TKNAlisFatura::setId(const IdTuru &value)
 {
     if(value==AlisFaturaId)
         return;
     AlisFaturaId = value;
-    emit AlisFaturaIdDegisti(AlisFaturaId);
+    emit idDegisti(AlisFaturaId);
 }
 
 TarihSaat TKNAlisFatura::getFaturaTarihi() const

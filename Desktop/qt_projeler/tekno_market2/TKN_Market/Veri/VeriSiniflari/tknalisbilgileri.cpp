@@ -5,17 +5,17 @@ TKNAlisBilgileri::TKNAlisBilgileri(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNAlisBilgileri::getParcaAlisId() const
+IdTuru TKNAlisBilgileri::getId() const
 {
     return parcaAlisId;
 }
 
-void TKNAlisBilgileri::setParcaAlisId(const IdTuru &value)
+void TKNAlisBilgileri::setId(const IdTuru &value)
 {
     if(value==parcaAlisId)
         return;
     parcaAlisId = value;
-    emit ParcaAlisIdDegisti(parcaAlisId);
+    emit IdDegisti(parcaAlisId);
 }
 
 ReelSayi TKNAlisBilgileri::getParcaAlisMiktari() const

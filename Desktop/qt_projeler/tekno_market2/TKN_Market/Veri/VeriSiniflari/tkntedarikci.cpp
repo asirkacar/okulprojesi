@@ -5,17 +5,17 @@ TKNTedarikci::TKNTedarikci(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNTedarikci::getTedarikciId() const
+IdTuru TKNTedarikci::getId() const
 {
     return TedarikciId;
 }
 
-void TKNTedarikci::setTedarikciId(const IdTuru &value)
+void TKNTedarikci::setId(const IdTuru &value)
 {
     if(value==TedarikciId)
         return;
     TedarikciId = value;
-    emit TedarikciIdDegisti(TedarikciId);
+    emit idDegisti(TedarikciId);
 }
 
 Metin TKNTedarikci::getTedarikciAdi() const

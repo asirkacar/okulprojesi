@@ -8,25 +8,26 @@ class TKNTedarikci : public QObject
     Q_OBJECT
 public:
     explicit TKNTedarikci(QObject *parent = nullptr);
+    Q_PROPERTY(IdTuru id READ getId WRITE setId NOTIFY idDegisti)
+    Q_PROPERTY(Metin TedarikciAdi READ getTedarikciAdi WRITE setTedarikciAdi NOTIFY TedarikciAdiDegisti)
+    Q_PROPERTY(Metin TedarikciAdresi READ getTedarikciAdresi WRITE setTedarikciAdresi NOTIFY TedarikciAdresiDegisti)
+    Q_PROPERTY(Metin TedarikciTelefonu READ getTedarikciTelefonu WRITE setTedarikciTelefonu NOTIFY TedarikciTelefonuDegisti)
+    Q_PROPERTY(Metin TedarikciYetkiliKisi READ getTedarikciYetkiliKisi WRITE setTedarikciYetkiliKisi NOTIFY TedarikciYetkiliKisiDegisti)
 
-    IdTuru getTedarikciId() const;
-
+    IdTuru getId() const;
     Metin getTedarikciAdi() const;
-
     Metin getTedarikciAdresi() const;
-
     Metin getTedarikciTelefonu() const;
-
     Metin getTedarikciYetkiliKisi() const;
 
 signals:
-    void TedarikciIdDegisti(const IdTuru &value);
+    void idDegisti(const IdTuru &value);
     void TedarikciAdiDegisti(const Metin &value);
     void TedarikciAdresiDegisti(const Metin &value);
     void TedarikciTelefonuDegisti(const Metin &value);
     void TedarikciYetkiliKisiDegisti(const Metin &value);
 public slots:
-    void setTedarikciId(const IdTuru &value);
+    void setId(const IdTuru &value);
     void setTedarikciAdi(const Metin &value);
     void setTedarikciAdresi(const Metin &value);
     void setTedarikciTelefonu(const Metin &value);

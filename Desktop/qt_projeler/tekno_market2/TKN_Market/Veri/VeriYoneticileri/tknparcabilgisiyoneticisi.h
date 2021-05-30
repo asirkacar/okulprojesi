@@ -3,43 +3,25 @@
 
 #include <QObject>
 #include <Veri/tanimlar.h>
-#include <QList>
-#include <functional>
+#include <Veri/VeriYoneticileri/temel_veri_yoneticisi.h>
 
-class TKNparcaBilgisiYoneticisi : public QObject
+class TKNparcaBilgisiYoneticisi : public QObject , public TemelVeriYoneticisi<TKNParcaBilgileri, TKNParcaBilgileriPtr>
 {
     Q_OBJECT
 public:
-    typedef TKNParcaBilgileri Veri;
-    typedef TKNParcaBilgileriPtr Ptr;
-    typedef QList<Ptr> Verilistesi ;
-    typedef std::function<bool(Ptr)> Sart;
+
 
     explicit TKNparcaBilgisiYoneticisi(QObject *parent = nullptr);
 
-    //Yeni parça oluşturma
-    Ptr yeni() const;
-
-    //Listeye yeni Parça ekleme
-    void ekle(Ptr parca);
-
-    //Listeden parca Silme
-    Ptr sil(IdTuru ParcaID);//hem id göndermeyle
-    Ptr sil(Ptr Parca);//hem ptr adını göndermeyle de kaydeder
 
     //Kopya oluşturma
     Ptr kopyaOlustur(Ptr kaynak) const;
 
-    //Parca Arama
-    Ptr ilkiniBul(Sart f);
-    Ptr sonuncuyuBul(Sart f);
-    Verilistesi tumunuBul(Sart f);
+
 
 signals:
 private:
-    Verilistesi veriler;
 
-    IdTuru enSonId;
 
 };
 

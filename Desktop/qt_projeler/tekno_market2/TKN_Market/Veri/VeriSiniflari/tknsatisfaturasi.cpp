@@ -5,17 +5,17 @@ TKNSatisFaturasi::TKNSatisFaturasi(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNSatisFaturasi::getSatisFaturaId() const
+IdTuru TKNSatisFaturasi::getId() const
 {
     return satisFaturaId;
 }
 
-void TKNSatisFaturasi::setSatisFaturaId(const IdTuru &value)
+void TKNSatisFaturasi::setId(const IdTuru &value)
 {
     if(value==satisFaturaId)
         return;
     satisFaturaId = value;
-    emit SatisFaturaIdDegisti(satisFaturaId);
+    emit IdDegisti(satisFaturaId);
 }
 
 TarihSaat TKNSatisFaturasi::getFaturaTarihi() const

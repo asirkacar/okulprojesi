@@ -9,22 +9,23 @@ class TKNMusteriBilgileri : public QObject
     Q_OBJECT
 public:
     explicit TKNMusteriBilgileri(QObject *parent = nullptr);
+    Q_PROPERTY(IdTuru id READ getId WRITE setId NOTIFY idDegisti)
+    Q_PROPERTY(Metin musteriAdi READ getMusteriAdi WRITE setMusteriAdi NOTIFY MusteriAdiDegisti)
+    Q_PROPERTY(Metin musteriAdresi READ getMusteriAdresi WRITE setMusteriAdresi NOTIFY MusteriAdresiDegisti)
+    Q_PROPERTY(Metin musteriTelefonu READ getMusteriTelefonu WRITE setMusteriTelefonu NOTIFY MusteriTelefonuDegisti)
 
-    IdTuru getMusteriId() const;
-
+    IdTuru getId() const;
     Metin getMusteriAdi() const;
-
     Metin getMusteriAdresi() const;
-
     Metin getMusteriTelefonu() const;
 
 signals:
-    void MusteriIdDegisti(const IdTuru &value);
+    void idDegisti(const IdTuru &value);
     void MusteriAdiDegisti(const Metin &value);
     void MusteriAdresiDegisti(const Metin &value);
     void MusteriTelefonuDegisti(const Metin &value);
 public slots:
-    void setMusteriId(const IdTuru &value);
+    void setId(const IdTuru &value);
     void setMusteriAdi(const Metin &value);
     void setMusteriAdresi(const Metin &value);
     void setMusteriTelefonu(const Metin &value);

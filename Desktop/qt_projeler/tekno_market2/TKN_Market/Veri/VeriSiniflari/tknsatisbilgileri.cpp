@@ -5,17 +5,17 @@ TKNSatisBilgileri::TKNSatisBilgileri(QObject *parent) : QObject(parent)
 
 }
 
-IdTuru TKNSatisBilgileri::getParcaSatisBilgiId() const
+IdTuru TKNSatisBilgileri::getId() const
 {
     return parcaSatisBilgiId;
 }
 
-void TKNSatisBilgileri::setParcaSatisBilgiId(const IdTuru &value)
+void TKNSatisBilgileri::setId(const IdTuru &value)
 {
     if(value==parcaSatisBilgiId)
         return;
     parcaSatisBilgiId = value;
-    emit ParcaSatisBilgiIdDegisti(parcaSatisBilgiId);
+    emit idDegisti(parcaSatisBilgiId);
 }
 
 ReelSayi TKNSatisBilgileri::getParcaSatisMiktari() const
