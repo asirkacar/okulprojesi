@@ -1,4 +1,5 @@
 #include "tknparcabilgileri.h"
+#include <QDataStream>
 
 TKNParcaBilgileri::TKNParcaBilgileri(QObject *parent) : QObject(parent)
 {
@@ -69,3 +70,30 @@ void TKNParcaBilgileri::setParcaOzellikleri(const Metin &value)
     ParcaOzellikleri = value;
     emit ParcaOzellikleriDegisti(ParcaOzellikleri);
 }
+QDataStream &operator<<(QDataStream &a, TKNParcaBilgileriPtr &b)
+{
+    a << b->getID()<< b->getParcaMarkasi()<<b->getParcaModeli()<<b->getParcaOzellikleri()<<b->getParcaTuru();
+    return a;
+}
+QDataStream &operator>>(QDataStream &a, TKNParcaBilgileriPtr &b)
+{
+    IdTuru id;
+    Metin parcaMarkası;
+    Metin parcaModeli;
+    ParcaTuru parcaTuru;
+    Metin parcaOzellikleri;
+
+    a >> id >> parcaMarkası >> parcaModeli >> parcaTuru >> parcaOzellikleri;
+
+    b=std::make_shared<TKNParcaBilgileri>();
+
+    b->setID(id);
+    b->setParcaMarkasi(parcaMarkası);
+    b->setParcaModeli(parcaModeli);
+    b->setParcaOzellikleri(parcaOzellikleri);
+    b->setParcaTuru(parcaTuru);
+    return a;
+
+
+}
+

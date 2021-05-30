@@ -33,5 +33,7 @@ private:
     ParaBirimi birimFiyat;
 
 };
+QDataStream &operator<<(QDataStream &stream, TKNSatisBilgileriPtr &veri);
+QDataStream &operator>>(QDataStream &stream, TKNSatisBilgileriPtr &veri);
 
 #endif // TKNSATISBILGILERI_H

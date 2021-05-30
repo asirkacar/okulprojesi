@@ -36,5 +36,6 @@ private:
     Metin musteriTelefonu;
 
 };
-
+QDataStream &operator<<(QDataStream &stream, TKNMusteriBilgileriPtr &veri);
+QDataStream &operator>>(QDataStream &stream, TKNMusteriBilgileriPtr &veri);
 #endif // TKNMUSTERIBILGILERI_H

@@ -21,8 +21,10 @@ public:
 
 signals:
 private:
+    friend QDataStream &operator<<(QDataStream &a, TKNparcaBilgisiYoneticisi &b)
 
 
 };
+QDataStream &operator<<(QDataStream &a, TKNparcaBilgisiYoneticisi &b);
 
 #endif // TKNPARCABILGISIYONETICISI_H

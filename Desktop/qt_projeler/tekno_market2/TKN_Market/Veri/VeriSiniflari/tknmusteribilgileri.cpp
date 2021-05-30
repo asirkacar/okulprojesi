@@ -56,3 +56,21 @@ void TKNMusteriBilgileri::setMusteriTelefonu(const Metin &value)
     musteriTelefonu = value;
     emit MusteriTelefonuDegisti(musteriTelefonu);
 }
+QDataStream &operator<<(QDataStream &stream, TKNMusteriBilgileriPtr &veri)
+{
+    stream<<veri->getId()<<veri->getMusteriAdi()<<veri->getMusteriAdresi()<<veri->getMusteriTelefonu();
+    return stream;
+}
+QDataStream &operator>>(QDataStream &stream, TKNMusteriBilgileriPtr &veri)
+{
+    IdTuru id;
+    Metin musteriAdi, musteriAdresi, musteriTelefonu;
+    stream >> id >> musteriAdi >> musteriAdresi >> musteriTelefonu;
+    veri=std::make_shared<TKNMusteriBilgileri>();
+    veri->setId(id);
+    veri->setMusteriAdi(musteriAdi);
+    veri->setMusteriAdresi(musteriAdresi);
+    veri->setMusteriTelefonu(musteriTelefonu);
+
+    return stream;
+}

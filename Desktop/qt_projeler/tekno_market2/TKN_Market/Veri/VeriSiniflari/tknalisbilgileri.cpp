@@ -48,3 +48,20 @@ void TKNAlisBilgileri::setBirimFiyat(const ParaBirimi &value)
     birimFiyat = value;
     emit BirimFiyatDegisti(birimFiyat);
 }
+QDataStream &operator<<(QDataStream &stream, TKNAlisBilgileriPtr &veri)
+{
+    stream << veri->getId()<<veri->getBirimFiyat()<<veri->getParcaAlisMiktari();
+    return stream;
+}
+QDataStream &operator>>(QDataStream &stream, TKNAlisBilgileriPtr &veri)
+{
+    IdTuru id;
+    ReelSayi alisMiktari;
+    ParaBirimi birimFiyat;
+    stream >> id >> alisMiktari >> birimFiyat;
+    veri=std::make_shared<TKNAlisBilgileri>();
+    veri->setId(id);
+    veri->setBirimFiyat(birimFiyat);
+    veri->setParcaAlisMiktari(alisMiktari);
+    return stream;
+}

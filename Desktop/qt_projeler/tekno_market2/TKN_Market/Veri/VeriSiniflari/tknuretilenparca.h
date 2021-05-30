@@ -32,5 +32,7 @@ private:
     Metin seriNumarasi;
 
 };
+QDataStream &operator<<(QDataStream &stream, TKNUretilenParcaPtr &veri);
+QDataStream &operator>>(QDataStream &stream, TKNUretilenParcaPtr &veri);
 
 #endif // TKNURETILENPARCA_H

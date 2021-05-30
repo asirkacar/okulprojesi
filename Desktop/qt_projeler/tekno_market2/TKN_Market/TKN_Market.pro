@@ -19,6 +19,7 @@ SOURCES += \
     Veri/VeriSiniflari/tknuretilenparca.cpp \
     Veri/VeriYoneticileri/tknalisfaturasiyoneticisi.cpp \
     Veri/VeriYoneticileri/tknparcabilgisiyoneticisi.cpp \
+    Veri/tkngenelveriyoneticisi.cpp \
     main.cpp \
     tknanapencere.cpp
 
@@ -35,6 +36,7 @@ HEADERS += \
     Veri/VeriYoneticileri/tknalisfaturasiyoneticisi.h \
     Veri/VeriYoneticileri/tknparcabilgisiyoneticisi.h \
     Veri/tanimlar.h \
+    Veri/tkngenelveriyoneticisi.h \
     tknanapencere.h
 
 FORMS += \

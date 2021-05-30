@@ -43,4 +43,8 @@ private:
 
 };
 
+QDataStream &operator<<(QDataStream &a, TKNParcaBilgileriPtr &b);
+QDataStream &operator>>(QDataStream &a, TKNParcaBilgileriPtr &b);
+
+
 #endif // TKNPARCABILGILERI_H

@@ -69,3 +69,25 @@ void TKNTedarikci::setTedarikciYetkiliKisi(const Metin &value)
     TedarikciYetkiliKisi = value;
     emit TedarikciYetkiliKisiDegisti(TedarikciYetkiliKisi);
 }
+QDataStream &operator<<(QDataStream &stream, TKNTedarikciPtr &veri)
+{
+    stream << veri->getId()<<veri->getTedarikciAdi()<<veri->getTedarikciAdresi()<<veri->getTedarikciTelefonu()<<veri->getTedarikciYetkiliKisi();
+    return stream;
+}
+QDataStream &operator>>(QDataStream &stream, TKNTedarikciPtr &veri)
+{
+    IdTuru id;
+    Metin adi, adresi, telefon, yetkili;
+
+    stream >> id >> adi >> adresi >> telefon >> yetkili;
+
+    veri = std::make_shared<TKNTedarikci>();
+
+    veri->setId(id);
+    veri->setTedarikciAdi(adi);
+    veri->setTedarikciAdresi(adresi);
+    veri->setTedarikciTelefonu(telefon);
+    veri->setTedarikciYetkiliKisi(yetkili);
+    return stream;
+
+}

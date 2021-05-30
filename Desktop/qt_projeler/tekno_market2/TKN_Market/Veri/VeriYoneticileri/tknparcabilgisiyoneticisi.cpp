@@ -16,4 +16,8 @@ TKNparcaBilgisiYoneticisi::Ptr TKNparcaBilgisiYoneticisi::kopyaOlustur(TKNparcaB
     kopya->setParcaTuru(kaynak->getParcaTuru());
     return kopya;
 }
+QDataStream &operator<<(QDataStream &a, TKNparcaBilgisiYoneticisi &b){
+    a<<b.enSonId<<b.veriler;
+    return a;
+}
 

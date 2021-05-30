@@ -43,3 +43,22 @@ void TKNUretilenParca::setSeriNumarasi(const Metin &value)
     seriNumarasi = value;
     emit seriNumarasiDegisti(seriNumarasi);
 }
+QDataStream &operator<<(QDataStream &stream, TKNUretilenParcaPtr &veri)
+{
+    stream<<veri->getId()<<veri->getKareKodu()<<veri->getSeriNumarasi();
+    return stream;
+}
+QDataStream &operator>>(QDataStream &stream, TKNUretilenParcaPtr &veri)
+{
+    IdTuru id;
+    KareKodResim kod;
+    Metin seri;
+
+    stream >> id >> kod >> seri;
+    veri = std::make_shared<TKNUretilenParca>();
+    veri->setId(id);
+    veri->setSeriNumarasi(seri);
+    veri->setKareKodu(kod);
+
+    return stream;
+}
