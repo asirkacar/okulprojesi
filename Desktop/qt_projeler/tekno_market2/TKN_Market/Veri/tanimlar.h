@@ -33,6 +33,21 @@ typedef enum
     PTKlavye=256,
     PTFare=512
 } ParcaTuru ;
+typedef enum
+{
+    PTEvet=1,
+    PTHayir=2,
+
+} ParcaEvetHayir ;
+
+typedef enum
+{
+    PTVar=1,
+    PTYok=2,
+
+} ParcaVarYok ;
+
+
 
 typedef QByteArray KareKodResim ;
 
@@ -57,5 +72,14 @@ typedef std::shared_ptr<TKNSatisBilgileri> TKNSatisBilgileriPtr;
 typedef std::shared_ptr<TKNSatisFaturasi> TKNSatisFaturasiPtr;
 typedef std::shared_ptr<TKNTedarikci> TKNTedarikciPtr;
 typedef std::shared_ptr<TKNUretilenParca> TKNUretilenParcaPtr;
+
+QDataStream &operator<<(QDataStream &stream, const TKNAlisFaturaPtr &veri);
+QDataStream &operator>>(QDataStream &stream, TKNAlisFaturaPtr &veri);
+
+QDataStream &operator<<(QDataStream &stream, const TKNMusteriBilgileriPtr &veri);
+QDataStream &operator>>(QDataStream &stream, TKNMusteriBilgileriPtr &veri);
+
+QDataStream &operator<<(QDataStream &a, const TKNParcaBilgileriPtr &b);
+QDataStream &operator>>(QDataStream &a, TKNParcaBilgileriPtr &b);
 
 #endif // TANIMLAR_H

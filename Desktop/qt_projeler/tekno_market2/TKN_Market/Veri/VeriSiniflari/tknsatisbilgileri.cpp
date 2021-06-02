@@ -48,7 +48,7 @@ void TKNSatisBilgileri::setBirimFiyat(const ParaBirimi &value)
     birimFiyat = value;
     emit BirimFiyatDegisti(birimFiyat);
 }
-QDataStream &operator<<(QDataStream &stream, TKNSatisBilgileriPtr &veri)
+QDataStream &operator<<(QDataStream &stream, const TKNSatisBilgileriPtr &veri)
 {
     stream << veri->getId() << veri->getBirimFiyat() << veri->getParcaSatisMiktari();
     return stream;

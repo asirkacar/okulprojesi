@@ -33,8 +33,39 @@
      </property>
      <addaction name="actionToplu_Par_a_retimi"/>
     </widget>
-    <addaction name="actionYeni_Par_a_Giri_i"/>
-    <addaction name="actionMevcut_Par_alar"/>
+    <widget class="QMenu" name="menuYeni_Par_a_Giri_i">
+     <property name="title">
+      <string>Yeni Parça Girişi</string>
+     </property>
+     <addaction name="actionAnakart"/>
+     <addaction name="action_lemci"/>
+     <addaction name="actionEkran_Kart"/>
+     <addaction name="actionRam"/>
+     <addaction name="actionHardDisk"/>
+     <addaction name="actionKasa"/>
+     <addaction name="actionG_Kayna"/>
+     <addaction name="actionMonit_r"/>
+     <addaction name="actionKlavye"/>
+     <addaction name="actionFare"/>
+    </widget>
+    <widget class="QMenu" name="menuMevcut_Par_alar">
+     <property name="title">
+      <string>Mevcut Parçalar</string>
+     </property>
+     <addaction name="actionT_m_Par_alar"/>
+     <addaction name="actionAnakartlar"/>
+     <addaction name="action_lemciler"/>
+     <addaction name="actionEkran_Kartlar"/>
+     <addaction name="actionRamler"/>
+     <addaction name="actionHarddiskler"/>
+     <addaction name="actionKasalar"/>
+     <addaction name="actionG_Kaynaklar"/>
+     <addaction name="actionMonit_rler"/>
+     <addaction name="actionKlavyeler"/>
+     <addaction name="actionFareler"/>
+    </widget>
+    <addaction name="menuYeni_Par_a_Giri_i"/>
+    <addaction name="menuMevcut_Par_alar"/>
     <addaction name="separator"/>
     <addaction name="menu_retilen_Par_alar"/>
    </widget>
@@ -79,16 +110,6 @@
    <addaction name="menuM_teri_Tan_mlar"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionYeni_Par_a_Giri_i">
-   <property name="text">
-    <string>Yeni Parça Girişi</string>
-   </property>
-  </action>
-  <action name="actionMevcut_Par_alar">
-   <property name="text">
-    <string>Mevcut Parçalar</string>
-   </property>
-  </action>
   <action name="actionToplu_Par_a_retimi">
    <property name="text">
     <string>Toplu Parça Üretimi</string>
@@ -132,6 +153,111 @@
   <action name="actionM_teriler">
    <property name="text">
     <string>Müşteriler</string>
+   </property>
+  </action>
+  <action name="actionAnakart">
+   <property name="text">
+    <string>Anakart</string>
+   </property>
+  </action>
+  <action name="action_lemci">
+   <property name="text">
+    <string>İşlemci</string>
+   </property>
+  </action>
+  <action name="actionEkran_Kart">
+   <property name="text">
+    <string>Ekran Kartı</string>
+   </property>
+  </action>
+  <action name="actionRam">
+   <property name="text">
+    <string>Ram</string>
+   </property>
+  </action>
+  <action name="actionHardDisk">
+   <property name="text">
+    <string>HardDisk</string>
+   </property>
+  </action>
+  <action name="actionKasa">
+   <property name="text">
+    <string>Kasa</string>
+   </property>
+  </action>
+  <action name="actionG_Kayna">
+   <property name="text">
+    <string>Güç Kaynağı</string>
+   </property>
+  </action>
+  <action name="actionMonit_r">
+   <property name="text">
+    <string>Monitör</string>
+   </property>
+  </action>
+  <action name="actionKlavye">
+   <property name="text">
+    <string>Klavye</string>
+   </property>
+  </action>
+  <action name="actionFare">
+   <property name="text">
+    <string>Fare</string>
+   </property>
+  </action>
+  <action name="actionT_m_Par_alar">
+   <property name="text">
+    <string>Tüm Parçalar</string>
+   </property>
+  </action>
+  <action name="actionAnakartlar">
+   <property name="text">
+    <string>Anakartlar Liste</string>
+   </property>
+  </action>
+  <action name="action_lemciler">
+   <property name="text">
+    <string>İşlemciler Liste</string>
+   </property>
+  </action>
+  <action name="actionEkran_Kartlar">
+   <property name="text">
+    <string>Ekran Kartları Liste</string>
+   </property>
+  </action>
+  <action name="actionRamler">
+   <property name="text">
+    <string>Ramler Liste</string>
+   </property>
+  </action>
+  <action name="actionHarddiskler">
+   <property name="text">
+    <string>Harddiskler Liste</string>
+   </property>
+  </action>
+  <action name="actionKasalar">
+   <property name="text">
+    <string>Kasalar Liste</string>
+   </property>
+  </action>
+  <action name="actionG_Kaynaklar">
+   <property name="text">
+    <string>Güç Kaynakları Liste</string>
+   </property>
+  </action>
+  <action name="actionMonit_rler">
+   <property name="text">
+    <string>Monitörler Liste</string>
+   </property>
+  </action>
+  <action name="actionKlavyeler">
+   <property name="text">
+    <string>Klavyeler Liste</string>
+   </property>
+  </action>
+  <action name="actionFareler">
+   <property name="text">
+    <string>Fareler Liste</string>
    </property>
   </action>
  </widget>

@@ -31,7 +31,7 @@ private:
     Metin faturaNo;
 
 };
-QDataStream &operator<<(QDataStream &stream, TKNSatisFaturasiPtr &veri);
+QDataStream &operator<<(QDataStream &stream, const TKNSatisFaturasiPtr &veri);
 QDataStream &operator>>(QDataStream &stream, TKNSatisFaturasiPtr &veri);
 
 #endif // TKNSATISFATURASI_H

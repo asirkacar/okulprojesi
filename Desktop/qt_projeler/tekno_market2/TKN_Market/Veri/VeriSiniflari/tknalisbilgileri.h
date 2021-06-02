@@ -35,7 +35,7 @@ private:
 
 
 };
-QDataStream &operator<<(QDataStream &stream, TKNAlisBilgileriPtr &veri);
+QDataStream &operator<<(QDataStream &stream, const TKNAlisBilgileriPtr &veri);
 QDataStream &operator>>(QDataStream &stream, TKNAlisBilgileriPtr &veri);
 
 #endif // TKNALISBILGILERI_H

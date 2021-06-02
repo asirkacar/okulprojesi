@@ -43,7 +43,7 @@ void TKNUretilenParca::setSeriNumarasi(const Metin &value)
     seriNumarasi = value;
     emit seriNumarasiDegisti(seriNumarasi);
 }
-QDataStream &operator<<(QDataStream &stream, TKNUretilenParcaPtr &veri)
+QDataStream &operator<<(QDataStream &stream, const TKNUretilenParcaPtr &veri)
 {
     stream<<veri->getId()<<veri->getKareKodu()<<veri->getSeriNumarasi();
     return stream;

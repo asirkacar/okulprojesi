@@ -43,7 +43,7 @@ void TKNSatisFaturasi::setFaturaNo(const Metin &value)
     faturaNo = value;
     emit FaturaNoDegisti(faturaNo);
 }
-QDataStream &operator<<(QDataStream &stream, TKNSatisFaturasiPtr &veri)
+QDataStream &operator<<(QDataStream &stream, const TKNSatisFaturasiPtr &veri)
 {
     stream<<veri->getId()<<veri->getFaturaNo()<<veri->getFaturaTarihi();
     return stream;

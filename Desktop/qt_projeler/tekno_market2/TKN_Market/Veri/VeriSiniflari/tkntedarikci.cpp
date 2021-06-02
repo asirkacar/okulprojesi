@@ -69,7 +69,7 @@ void TKNTedarikci::setTedarikciYetkiliKisi(const Metin &value)
     TedarikciYetkiliKisi = value;
     emit TedarikciYetkiliKisiDegisti(TedarikciYetkiliKisi);
 }
-QDataStream &operator<<(QDataStream &stream, TKNTedarikciPtr &veri)
+QDataStream &operator<<(QDataStream &stream, const TKNTedarikciPtr &veri)
 {
     stream << veri->getId()<<veri->getTedarikciAdi()<<veri->getTedarikciAdresi()<<veri->getTedarikciTelefonu()<<veri->getTedarikciYetkiliKisi();
     return stream;

@@ -42,7 +42,7 @@ private:
 
 
 };
-QDataStream &operator<<(QDataStream &stream, TKNTedarikciPtr &veri);
+QDataStream &operator<<(QDataStream &stream, const TKNTedarikciPtr &veri);
 QDataStream &operator>>(QDataStream &stream, TKNTedarikciPtr &veri);
 
 #endif // TKNTEDARIKCI_H

@@ -48,7 +48,7 @@ void TKNAlisBilgileri::setBirimFiyat(const ParaBirimi &value)
     birimFiyat = value;
     emit BirimFiyatDegisti(birimFiyat);
 }
-QDataStream &operator<<(QDataStream &stream, TKNAlisBilgileriPtr &veri)
+QDataStream &operator<<(QDataStream &stream, const TKNAlisBilgileriPtr &veri)
 {
     stream << veri->getId()<<veri->getBirimFiyat()<<veri->getParcaAlisMiktari();
     return stream;

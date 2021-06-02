@@ -27,7 +27,7 @@ public:
     void ekle(Ptr parca)
     {
         //ParcaId=0 , enSonId=0
-        parca->setId(enSonId++); //ilacId=0, enSonId=1 olur ++ solda olsaydı(++enSonId) parcaıd=1 ensonıd=0 olcak ordaki
+        parca->setID(enSonId++); //ilacId=0, enSonId=1 olur ++ solda olsaydı(++enSonId) parcaıd=1 ensonıd=0 olcak ordaki
                                        //yazan işlemden sonrakini 1 artırıyo yani artılardan önce ne yazıyosa onu artırıyo
                                         //(parcaıd++ensonıd) olsaydı parcaıd=1 olurdu gibi
         veriler.append(parca);
