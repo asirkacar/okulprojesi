@@ -141,7 +141,7 @@ void TKNEkranKartListe::aramaYap()
                     if(!veri->getParcaMarkasi().toLower().startsWith(ekran->leParcaMarkaDegeri->text().toLower())){
                         return false;
                     }
-                }else if(ekran->rbParcaMarkaIleBiten->isChecked()){
+                } else if(ekran->rbParcaMarkaIleBiten->isChecked()){
                     if(!veri->getParcaMarkasi().toLower().endsWith(ekran->leParcaMarkaDegeri->text().toLower())){
                         return false;
                     }
