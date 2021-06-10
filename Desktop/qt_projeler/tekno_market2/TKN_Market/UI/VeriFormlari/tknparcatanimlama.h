@@ -2,6 +2,7 @@
 #define TKNPARCATANIMLAMA_H
 
 #include <QDialog>
+#include <Veri/tanimlar.h>
 
 namespace Ui {
 class TKNParcaTanimlama;

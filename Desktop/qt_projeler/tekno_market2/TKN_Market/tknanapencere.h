@@ -27,6 +27,42 @@ private slots:
 
     void on_action_lemci_triggered();
 
+    void on_actionEkran_Kart_triggered();
+
+    void on_actionFare_triggered();
+
+    void on_actionG_Kayna_triggered();
+
+    void on_actionRam_triggered();
+
+    void on_actionHardDisk_triggered();
+
+    void on_actionKasa_triggered();
+
+    void on_actionMonit_r_triggered();
+
+    void on_actionKlavye_triggered();
+
+    void on_actionAnakartlar_triggered();
+
+    void on_action_lemciler_triggered();
+
+    void on_actionEkran_Kartlar_triggered();
+
+    void on_actionRamler_triggered();
+
+    void on_actionHarddiskler_triggered();
+
+    void on_actionKasalar_triggered();
+
+    void on_actionG_Kaynaklar_triggered();
+
+    void on_actionMonit_rler_triggered();
+
+    void on_actionKlavyeler_triggered();
+
+    void on_actionFareler_triggered();
+
 private:
     Ui::TKNAnaPencere *ui;
 };

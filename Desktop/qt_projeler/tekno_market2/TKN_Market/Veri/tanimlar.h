@@ -24,11 +24,11 @@ typedef enum
 {
     PTAnakart=1,
     PTCPU=2,
-    PTRam=4,
-    PTHDD=8,
-    PTEkranKart=16,
-    PTGucKaynak=32,
-    PTKasa=64,
+    PTEkranKart=4,
+    PTRam=8,
+    PTHDD=16,
+    PTKasa=32,
+    PTGucKaynak=64,
     PTMonitor=128,
     PTKlavye=256,
     PTFare=512

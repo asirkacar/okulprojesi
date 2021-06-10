@@ -16,9 +16,14 @@ public:
     explicit TKNTumParcaListesi(QWidget *parent = nullptr);
     ~TKNTumParcaListesi();
 
+private slots:
+    void on_pushButton_2_clicked();
+    void Ara();
+
 private:
     void ListeGuncelle();
-    void Ara();
+    void aramaYap();
+
     Ui::TKNTumParcaListesi *ui;
     TKNparcaBilgisiYoneticisi::Verilistesi liste;
 };

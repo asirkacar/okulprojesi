@@ -16,6 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 
@@ -27,11 +28,15 @@ public:
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout_2;
+    QLabel *label_6;
+    QLabel *label_5;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
     QVBoxLayout *verticalLayout;
+    QLineEdit *lineEdit_6;
+    QLineEdit *lineEdit_5;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
@@ -40,14 +45,15 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_2;
+    QRadioButton *radioButton;
     QPushButton *pushButton;
 
     void setupUi(QDialog *TKNRamPencere)
     {
         if (TKNRamPencere->objectName().isEmpty())
             TKNRamPencere->setObjectName(QString::fromUtf8("TKNRamPencere"));
-        TKNRamPencere->resize(577, 299);
-        TKNRamPencere->setMaximumSize(QSize(600, 350));
+        TKNRamPencere->resize(600, 467);
+        TKNRamPencere->setMaximumSize(QSize(600, 600));
         verticalLayout_3 = new QVBoxLayout(TKNRamPencere);
         verticalLayout_3->setSpacing(7);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
@@ -55,7 +61,18 @@ public:
         horizontalLayout->setSpacing(7);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(60);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        label_6 = new QLabel(TKNRamPencere);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        verticalLayout_2->addWidget(label_6);
+
+        label_5 = new QLabel(TKNRamPencere);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        verticalLayout_2->addWidget(label_5);
+
         label = new QLabel(TKNRamPencere);
         label->setObjectName(QString::fromUtf8("label"));
 
@@ -80,8 +97,18 @@ public:
         horizontalLayout->addLayout(verticalLayout_2);
 
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setSpacing(47);
+        verticalLayout->setSpacing(53);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        lineEdit_6 = new QLineEdit(TKNRamPencere);
+        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+
+        verticalLayout->addWidget(lineEdit_6);
+
+        lineEdit_5 = new QLineEdit(TKNRamPencere);
+        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+
+        verticalLayout->addWidget(lineEdit_5);
+
         lineEdit = new QLineEdit(TKNRamPencere);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
 
@@ -123,6 +150,12 @@ public:
 
         horizontalLayout_2->addWidget(pushButton_2);
 
+        radioButton = new QRadioButton(TKNRamPencere);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        radioButton->setChecked(true);
+
+        horizontalLayout_2->addWidget(radioButton);
+
         pushButton = new QPushButton(TKNRamPencere);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
@@ -133,6 +166,8 @@ public:
 
 
         retranslateUi(TKNRamPencere);
+        QObject::connect(pushButton_2, SIGNAL(clicked()), TKNRamPencere, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNRamPencere, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(TKNRamPencere);
     } // setupUi
@@ -140,11 +175,14 @@ public:
     void retranslateUi(QDialog *TKNRamPencere)
     {
         TKNRamPencere->setWindowTitle(QCoreApplication::translate("TKNRamPencere", "Dialog", nullptr));
+        label_6->setText(QCoreApplication::translate("TKNRamPencere", "Marka", nullptr));
+        label_5->setText(QCoreApplication::translate("TKNRamPencere", "Model", nullptr));
         label->setText(QCoreApplication::translate("TKNRamPencere", "Ram Tipi", nullptr));
         label_2->setText(QCoreApplication::translate("TKNRamPencere", "Haf\304\261za Bus H\304\261z\304\261", nullptr));
         label_3->setText(QCoreApplication::translate("TKNRamPencere", "Ram Kapasitesi", nullptr));
         label_4->setText(QCoreApplication::translate("TKNRamPencere", "Gecikme S\303\274resi", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TKNRamPencere", "Kaydet", nullptr));
+        radioButton->setText(QString());
         pushButton->setText(QCoreApplication::translate("TKNRamPencere", "\304\260ptal Et", nullptr));
     } // retranslateUi
 

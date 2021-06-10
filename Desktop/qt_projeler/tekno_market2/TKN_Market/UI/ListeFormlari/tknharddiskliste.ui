@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TKNHarddiskListe</class>
+ <widget class="QDialog" name="TKNHarddiskListe">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>755</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Arama</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Parça Markası</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Değer</string>
+             </property>
+             <property name="buddy">
+              <cstring>leParcaMarkaDegeri</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="leParcaMarkaDegeri"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Filtre Türü</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QRadioButton" name="rbParcaMarkaIleBaslayan">
+                <property name="text">
+                 <string>İle Başlayan</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaMarkaIleBiten">
+                <property name="text">
+                 <string>İle Biten</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaMarkaIceren">
+                <property name="text">
+                 <string>İçeren</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Parça Modeli</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Değer</string>
+             </property>
+             <property name="buddy">
+              <cstring>leParcaMarkaDegeri</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="leParcaModelDegeri"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>Filtre Türü</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QRadioButton" name="rbParcaModelIleBaslayan">
+                <property name="text">
+                 <string>İle Başlayan</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaModelIleBiten">
+                <property name="text">
+                 <string>İle Biten</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaModelIceren">
+                <property name="text">
+                 <string>İçeren</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Ara</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cbYazarkenAra">
+          <property name="text">
+           <string>Yazarken Ara</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Kapat</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cbYazarkenAra</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pushButton</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leParcaModelDegeri</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>592</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaModelIceren</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>569</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>569</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaModelIleBiten</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaModelIleBaslayan</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>135</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>418</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leParcaMarkaDegeri</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>318</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaMarkaIceren</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaMarkaIleBiten</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaMarkaIleBaslayan</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>698</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>438</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Ara()</slot>
+ </slots>
+</ui>

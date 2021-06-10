@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TKNEkranKartListe</class>
+ <widget class="QDialog" name="TKNEkranKartListe">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Arama</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Parça Markası</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Değer</string>
+             </property>
+             <property name="buddy">
+              <cstring>leParcaMarkaDegeri</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="leParcaMarkaDegeri"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Filtre Türü</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QRadioButton" name="rbParcaMarkaIleBaslayan">
+                <property name="text">
+                 <string>İle Başlayan</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaMarkaIleBiten">
+                <property name="text">
+                 <string>İle Biten</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaMarkaIceren">
+                <property name="text">
+                 <string>İçeren</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Parça Modeli</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Değer</string>
+             </property>
+             <property name="buddy">
+              <cstring>leParcaMarkaDegeri</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="leParcaModelDegeri"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>Filtre Türü</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QRadioButton" name="rbParcaModelIleBaslayan">
+                <property name="text">
+                 <string>İle Başlayan</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaModelIleBiten">
+                <property name="text">
+                 <string>İle Biten</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="rbParcaModelIceren">
+                <property name="text">
+                 <string>İçeren</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>Ara</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cbYazarkenAra">
+          <property name="text">
+           <string>Yazarken Ara</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Kapat</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cbYazarkenAra</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pushButton_2</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>747</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaModelIceren</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaModelIleBiten</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaModelIleBaslayan</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>449</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leParcaModelDegeri</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>483</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leParcaMarkaDegeri</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaMarkaIceren</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaMarkaIleBiten</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>198</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbParcaMarkaIleBaslayan</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNEkranKartListe</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>476</x>
+     <y>514</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>835</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Ara()</slot>
+ </slots>
+</ui>

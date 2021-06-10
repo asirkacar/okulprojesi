@@ -1,93 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TKNRamPencere</class>
- <widget class="QDialog" name="TKNRamPencere">
+ <class>TKNFarePencere</class>
+ <widget class="QDialog" name="TKNFarePencere">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>467</height>
+    <width>400</width>
+    <height>424</height>
    </rect>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>600</width>
-    <height>600</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
-   <property name="spacing">
-    <number>7</number>
-   </property>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="spacing">
-      <number>7</number>
-     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
-        <number>60</number>
+        <number>55</number>
        </property>
-       <item>
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>Marka</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Model</string>
-         </property>
-        </widget>
-       </item>
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>Ram Tipi</string>
+          <string>Marka</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEdit</cstring>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Hafıza Bus Hızı</string>
+          <string>Model</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEdit_2</cstring>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Ram Kapasitesi</string>
+          <string>Fare Tipi</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEdit_3</cstring>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Gecikme Süresi</string>
+          <string>Dpi</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEdit_4</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Bağlantı Özellikleri</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEdit_5</cstring>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="spacing">
-        <number>53</number>
+        <number>54</number>
        </property>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_5"/>
-       </item>
        <item>
         <widget class="QLineEdit" name="lineEdit"/>
        </item>
@@ -99,6 +89,9 @@
        </item>
        <item>
         <widget class="QLineEdit" name="lineEdit_4"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_5"/>
        </item>
       </layout>
      </item>
@@ -118,7 +111,7 @@
     </spacer>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
@@ -133,7 +126,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>Kaydet</string>
        </property>
@@ -150,7 +143,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="text">
         <string>İptal Et</string>
        </property>
@@ -163,34 +156,34 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>TKNRamPencere</receiver>
+   <receiver>TKNFarePencere</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
-     <y>451</y>
+     <x>200</x>
+     <y>400</y>
     </hint>
     <hint type="destinationlabel">
-     <x>233</x>
-     <y>443</y>
+     <x>93</x>
+     <y>399</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_2</sender>
    <signal>clicked()</signal>
-   <receiver>TKNRamPencere</receiver>
+   <receiver>TKNFarePencere</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>519</x>
-     <y>440</y>
+     <x>324</x>
+     <y>399</y>
     </hint>
     <hint type="destinationlabel">
-     <x>72</x>
-     <y>446</y>
+     <x>27</x>
+     <y>399</y>
     </hint>
    </hints>
   </connection>
