@@ -26,9 +26,9 @@ private:
     TKNAlisFaturasiYoneticisi alisFaturalari;
     TKNparcaBilgisiYoneticisi parcaBilgisi;
     TKNMusteriBilgileriYoneticisi musteriBilgileri;
-    friend QDataStream &operator<<(QDataStream &a, TKNGenelVeriYoneticisi &b);
+    friend QDataStream &operator<<(QDataStream &a, const TKNGenelVeriYoneticisi &b);
     friend QDataStream &operator>>(QDataStream &a, TKNGenelVeriYoneticisi &b);
 };
-QDataStream &operator<<(QDataStream &a, TKNGenelVeriYoneticisi &b);
+QDataStream &operator<<(QDataStream &a, const TKNGenelVeriYoneticisi &b);
 QDataStream &operator>>(QDataStream &a, TKNGenelVeriYoneticisi &b);
 #endif // TKNGENELVERIYONETICISI_H

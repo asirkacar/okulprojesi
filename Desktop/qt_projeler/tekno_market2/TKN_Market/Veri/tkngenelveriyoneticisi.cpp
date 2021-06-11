@@ -25,13 +25,13 @@ TKNMusteriBilgileriYoneticisi &TKNGenelVeriYoneticisi::getMusteriBilgileri()
 {
     return musteriBilgileri;
 }
-QDataStream &operator<<(QDataStream &a, TKNGenelVeriYoneticisi &b)
+QDataStream &operator<<(QDataStream &a, const TKNGenelVeriYoneticisi &b)
 {
-    a<<b.musteriBilgileri<<b.alisFaturalari<<b.getParcaBilgisi();
+    a<<b.musteriBilgileri<<b.alisFaturalari<<b.parcaBilgisi;
     return a;
 }
 QDataStream &operator>>(QDataStream &a, TKNGenelVeriYoneticisi &b)
 {
-    a>>b.musteriBilgileri>>b.alisFaturalari>>b.getParcaBilgisi();
+    a>>b.musteriBilgileri>>b.alisFaturalari>>b.parcaBilgisi;
     return a;
 }

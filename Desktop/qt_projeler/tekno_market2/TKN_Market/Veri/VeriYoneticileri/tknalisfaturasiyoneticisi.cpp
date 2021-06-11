@@ -15,3 +15,7 @@ TKNAlisFaturasiYoneticisi::Ptr TKNAlisFaturasiYoneticisi::kopyaOlustur(TKNAlisFa
 
     return kopya;
 }
+QDataStream &operator<<(QDataStream &a, const TKNAlisFaturasiYoneticisi &b){
+    a<<b.enSonId<<b.veriler;
+    return a;
+}
