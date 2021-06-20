@@ -10,6 +10,7 @@
 #define UI_TKNTEDARIKCILISTEW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
@@ -682,6 +683,9 @@ public:
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/resimler/Search-1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon);
 
         verticalLayout_3->addWidget(pushButton);
 

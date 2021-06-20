@@ -10,6 +10,7 @@
 #define UI_TEDARIKCIDUZENLEME_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -609,6 +610,9 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         btnKaydet = new QPushButton(TedarikciDuzenleme);
         btnKaydet->setObjectName(QString::fromUtf8("btnKaydet"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/resimler/Save.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnKaydet->setIcon(icon);
 
         horizontalLayout->addWidget(btnKaydet);
 
@@ -618,6 +622,9 @@ public:
 
         btnIptal = new QPushButton(TedarikciDuzenleme);
         btnIptal->setObjectName(QString::fromUtf8("btnIptal"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/resimler/dialog-close.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnIptal->setIcon(icon1);
 
         horizontalLayout->addWidget(btnIptal);
 

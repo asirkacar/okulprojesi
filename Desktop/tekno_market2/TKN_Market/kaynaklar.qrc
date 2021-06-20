@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resimler/Close.png</file>
+        <file>resimler/cpu.png</file>
+        <file>resimler/dialog-close.png</file>
+        <file>resimler/ekrankart.png</file>
+        <file>resimler/Hardware-Central-Unit-icon.png</file>
+        <file>resimler/hdd.png</file>
+        <file>resimler/keyboard.png</file>
+        <file>resimler/monitor.png</file>
+        <file>resimler/motherboard.png</file>
+        <file>resimler/Mouse.png</file>
+        <file>resimler/musteri.png</file>
+        <file>resimler/power_supply.png</file>
+        <file>resimler/RAM.png</file>
+        <file>resimler/Save.png</file>
+        <file>resimler/Search-1.png</file>
+        <file>resimler/box_search_tumparca.png</file>
+        <file>resimler/search_accounts.png</file>
+        <file>resimler/client_tedarikci.png</file>
+    </qresource>
+</RCC>

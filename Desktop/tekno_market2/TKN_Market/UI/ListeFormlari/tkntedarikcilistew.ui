@@ -644,6 +644,10 @@ QTimeEdit, QToolBox, QToolBox::tab, QToolBox::tab:selected {
           <property name="text">
            <string>Ara</string>
           </property>
+          <property name="icon">
+           <iconset resource="../../kaynaklar.qrc">
+            <normaloff>:/resimler/Search-1.png</normaloff>:/resimler/Search-1.png</iconset>
+          </property>
          </widget>
         </item>
         <item>
@@ -663,7 +667,9 @@ QTimeEdit, QToolBox, QToolBox::tab, QToolBox::tab:selected {
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../kaynaklar.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>cbYazarkenAra</sender>

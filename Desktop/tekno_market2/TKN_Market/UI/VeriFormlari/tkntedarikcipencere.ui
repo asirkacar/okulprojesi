@@ -537,12 +537,20 @@ QTimeEdit, QToolBox, QToolBox::tab, QToolBox::tab:selected {
        <property name="text">
         <string>Kapat</string>
        </property>
+       <property name="icon">
+        <iconset resource="../../kaynaklar.qrc">
+         <normaloff>:/resimler/dialog-close.png</normaloff>:/resimler/dialog-close.png</iconset>
+       </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btnYeniTedarikci">
        <property name="text">
         <string>Yeni Tedarikçi</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../kaynaklar.qrc">
+         <normaloff>:/resimler/client_tedarikci.png</normaloff>:/resimler/client_tedarikci.png</iconset>
        </property>
       </widget>
      </item>
@@ -563,7 +571,9 @@ QTimeEdit, QToolBox, QToolBox::tab, QToolBox::tab:selected {
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../kaynaklar.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>pushButton</sender>

@@ -569,6 +569,10 @@ QTimeEdit, QToolBox, QToolBox::tab, QToolBox::tab:selected {
        <property name="text">
         <string>Kaydet</string>
        </property>
+       <property name="icon">
+        <iconset resource="../../../kaynaklar.qrc">
+         <normaloff>:/resimler/Save.png</normaloff>:/resimler/Save.png</iconset>
+       </property>
       </widget>
      </item>
      <item>
@@ -589,12 +593,18 @@ QTimeEdit, QToolBox, QToolBox::tab, QToolBox::tab:selected {
        <property name="text">
         <string>İptal Et</string>
        </property>
+       <property name="icon">
+        <iconset resource="../../../kaynaklar.qrc">
+         <normaloff>:/resimler/dialog-close.png</normaloff>:/resimler/dialog-close.png</iconset>
+       </property>
       </widget>
      </item>
     </layout>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../../kaynaklar.qrc"/>
+ </resources>
  <connections/>
 </ui>

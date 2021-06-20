@@ -10,6 +10,7 @@
 #define UI_TKNANAKARTPENCERE_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
@@ -722,6 +723,9 @@ public:
 
         pushButton = new QPushButton(TKNAnakartPencere);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/resimler/Save.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon);
 
         horizontalLayout->addWidget(pushButton);
 
@@ -734,6 +738,9 @@ public:
 
         pushButton_3 = new QPushButton(TKNAnakartPencere);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/resimler/dialog-close.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_3->setIcon(icon1);
 
         horizontalLayout->addWidget(pushButton_3);
 
