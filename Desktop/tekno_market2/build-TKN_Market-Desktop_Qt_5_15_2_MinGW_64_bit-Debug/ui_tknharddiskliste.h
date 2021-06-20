@@ -212,6 +212,7 @@ public:
         QObject::connect(rbParcaMarkaIleBiten, SIGNAL(clicked()), TKNHarddiskListe, SLOT(Ara()));
         QObject::connect(rbParcaMarkaIleBaslayan, SIGNAL(clicked()), TKNHarddiskListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNHarddiskListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNHarddiskListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNHarddiskListe);
     } // setupUi

@@ -335,6 +335,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNGucKaynakListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>777</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>802</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>Ara()</slot>

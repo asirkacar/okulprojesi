@@ -335,6 +335,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNMonitorListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>731</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>780</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>Ara()</slot>

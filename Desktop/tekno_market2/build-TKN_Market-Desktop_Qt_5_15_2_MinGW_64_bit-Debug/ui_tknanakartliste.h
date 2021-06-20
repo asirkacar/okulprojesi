@@ -212,6 +212,7 @@ public:
         QObject::connect(leParcaMarkaDegeri, SIGNAL(textChanged(QString)), TKNAnakartListe, SLOT(Ara()));
         QObject::connect(leParcaModelDegeri, SIGNAL(textChanged(QString)), TKNAnakartListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNAnakartListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNAnakartListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNAnakartListe);
     } // setupUi

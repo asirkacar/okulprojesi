@@ -336,6 +336,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNTumParcaListesi</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>663</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>888</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>Ara()</slot>

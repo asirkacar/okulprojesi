@@ -41,7 +41,7 @@ void TKNEkranKartListe::ListeGuncelle()
     QStringList basliklar;
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Bellek Tipi")
               << tr("Bellek Kapasitesi") << tr("Bellek Hızı") << tr("Vga Slot") << tr("HDMI") << tr("Güç Tüketim")
-              << tr("Boyutlar");
+              << tr("Boyutlar")<< tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){

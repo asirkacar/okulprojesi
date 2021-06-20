@@ -212,6 +212,7 @@ public:
         QObject::connect(rbParcaModelIleBiten, SIGNAL(clicked()), TKNMonitorListe, SLOT(Ara()));
         QObject::connect(rbParcaModelIleBaslayan, SIGNAL(clicked()), TKNMonitorListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNMonitorListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNMonitorListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNMonitorListe);
     } // setupUi

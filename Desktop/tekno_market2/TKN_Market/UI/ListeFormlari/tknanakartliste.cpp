@@ -31,7 +31,7 @@ void TKNAnakartListe::ListeGuncelle()
     QStringList basliklar;
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Anakart Yapısı")
               << tr("Anakart Chipseti") << tr("Soket tipi") << tr("Ram Tipi") << tr("Ram Slot Sayısı") << tr("Max Ram Desteği")
-              << tr("M2 Yuva Sayısı") << tr("USB 3.0") << tr("USB 2.0") << tr("HDMI");
+              << tr("M2 Yuva Sayısı") << tr("USB 3.0") << tr("USB 2.0") << tr("HDMI")<< tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){

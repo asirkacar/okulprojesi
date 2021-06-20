@@ -61,6 +61,7 @@ TKNAnaPencere::TKNAnaPencere(QWidget *parent)
 TKNAnaPencere::~TKNAnaPencere()
 {
     delete ui;
+
     QString dosya_yolu=QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
     QFile dosya(dosya_yolu+"/tekno.db");
 
@@ -212,66 +213,77 @@ void TKNAnaPencere::on_actionKlavye_triggered()
 void TKNAnaPencere::on_actionAnakartlar_triggered()
 {
     TKNAnakartListe form;
+    form.setWindowTitle(tr("Anakart Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_action_lemciler_triggered()
 {
     TKNIslemciListe form;
+    form.setWindowTitle(tr("İşlemci Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionEkran_Kartlar_triggered()
 {
     TKNEkranKartListe form;
+    form.setWindowTitle(tr("Ekran Kartları Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionRamler_triggered()
 {
     TKNRamListe form;
+    form.setWindowTitle(tr("Ramler Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionHarddiskler_triggered()
 {
     TKNHarddiskListe form;
+    form.setWindowTitle(tr("HDD'ler Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionKasalar_triggered()
 {
     TKNKasaListe form;
+    form.setWindowTitle(tr("Kasalar Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionG_Kaynaklar_triggered()
 {
     TKNGucKaynakListe form;
+    form.setWindowTitle(tr("Güç Kaynakları Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionMonit_rler_triggered()
 {
     TKNMonitorListe form;
+    form.setWindowTitle(tr("Monitörler Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionKlavyeler_triggered()
 {
     TKNMonitorListe form;
+    form.setWindowTitle(tr("Klavyeler Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionFareler_triggered()
 {
     TKNFareListe form;
+    form.setWindowTitle(tr("Fareler Liste"));
     form.exec();
 }
 
 void TKNAnaPencere::on_actionYeni_Tedarik_i_Tan_mlama_triggered()
 {
     TKNTedarikciPencere form;
+    form.setWindowTitle(tr("Tedarikçi"));
     form.exec();
 }
 
@@ -292,6 +304,7 @@ void TKNAnaPencere::on_actionYeni_M_teri_triggered()
 void TKNAnaPencere::on_actionM_teriler_triggered()
 {
     TKNMusteriListe form;
+    form.setWindowTitle(tr("Müşteri Listesi"));
     form.exec();
 }
 

@@ -212,6 +212,7 @@ public:
         QObject::connect(rbParcaMarkaIleBaslayan, SIGNAL(clicked()), TKNGucKaynakListe, SLOT(Ara()));
         QObject::connect(leParcaMarkaDegeri, SIGNAL(textChanged(QString)), TKNGucKaynakListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNGucKaynakListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNGucKaynakListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNGucKaynakListe);
     } // setupUi

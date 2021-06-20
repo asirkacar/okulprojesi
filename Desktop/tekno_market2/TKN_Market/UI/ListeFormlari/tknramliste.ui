@@ -335,6 +335,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNRamListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>753</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>Ara()</slot>

@@ -32,7 +32,7 @@ void TKNKasaListe::ListeGuncelle()
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Kasa Yapısı")
               << tr("Anakart Yapısı") << tr("Kasa Boyutu") << tr("Güç kaynağı") << tr("Güç Değeri")
               << tr("Dahili Fan Sayısı") << tr("Fan Yuva Sayısı") << tr("Ekran Kartı Desteği") << tr("İşlemci Soğutucu "
-"Yüksekliği") << tr("3.5 Hdd Yuva Sayısı") << tr("2.5 Hdd Yuva Sayısı") << tr("Usb Sayısı");
+"Yüksekliği") << tr("3.5 Hdd Yuva Sayısı") << tr("2.5 Hdd Yuva Sayısı") << tr("Usb Sayısı")<< tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){

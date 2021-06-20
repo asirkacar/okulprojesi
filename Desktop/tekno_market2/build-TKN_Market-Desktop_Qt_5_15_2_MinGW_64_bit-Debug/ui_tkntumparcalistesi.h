@@ -215,6 +215,7 @@ public:
         QObject::connect(rbParcaAdiIleBiten, SIGNAL(clicked()), TKNTumParcaListesi, SLOT(Ara()));
         QObject::connect(rbParcaAdiIleBaslayan, SIGNAL(clicked()), TKNTumParcaListesi, SLOT(Ara()));
         QObject::connect(cbYazarkenAra, SIGNAL(clicked(bool)), pushButton_2, SLOT(setDisabled(bool)));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), TKNTumParcaListesi, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNTumParcaListesi);
     } // setupUi

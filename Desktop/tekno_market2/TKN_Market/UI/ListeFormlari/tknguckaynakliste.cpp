@@ -30,7 +30,7 @@ void TKNGucKaynakListe::ListeGuncelle()
     ui->tableWidget->setColumnCount(8);
     QStringList basliklar;
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Güç Değeri")
-              << tr("Fan Boyutu");
+              << tr("Fan Boyutu")<< tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){

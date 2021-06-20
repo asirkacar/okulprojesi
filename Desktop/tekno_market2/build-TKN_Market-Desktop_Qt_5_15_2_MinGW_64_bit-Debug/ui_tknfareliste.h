@@ -212,6 +212,7 @@ public:
         QObject::connect(rbParcaMarkaIleBiten, SIGNAL(clicked()), TKNFareListe, SLOT(Ara()));
         QObject::connect(rbParcaMarkaIleBaslayan, SIGNAL(clicked()), TKNFareListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNFareListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNFareListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNFareListe);
     } // setupUi

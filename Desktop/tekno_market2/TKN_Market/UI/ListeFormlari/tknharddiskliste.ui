@@ -335,6 +335,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNHarddiskListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>706</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>Ara()</slot>

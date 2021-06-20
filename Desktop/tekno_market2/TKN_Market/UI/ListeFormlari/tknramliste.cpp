@@ -30,7 +30,7 @@ void TKNRamListe::ListeGuncelle()
     ui->tableWidget->setColumnCount(10);
     QStringList basliklar;
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Ram Tipi")
-              << tr("Hafıza Bus Hızı") << tr("Ram Kapasitesi") << tr("Gecikme Süresi");
+              << tr("Hafıza Bus Hızı") << tr("Ram Kapasitesi") << tr("Gecikme Süresi") << tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QGroupBox" name="groupBox">
@@ -332,6 +335,22 @@
     <hint type="destinationlabel">
      <x>744</x>
      <y>345</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>TKNKasaListe</receiver>
+   <slot>Ara()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>716</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>98</y>
     </hint>
    </hints>
   </connection>

@@ -29,10 +29,9 @@ void TKNTumParcaListesi::ListeGuncelle()
     ui->tableWidget->clear();
     //satır sütun ayarlanır
     ui->tableWidget->setRowCount(liste.length()+1);
-    ui->tableWidget->setColumnCount(8);
+    ui->tableWidget->setColumnCount(5);
     QStringList basliklar;
-    basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("İşlemci Entegre kart")
-              << tr("sogutucu") << tr("Parça Sil") << ("Parça Düzelt");
+    basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Parça Sil");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
     //veri
     for(int i=0; i<liste.length(); i++){
@@ -84,27 +83,9 @@ void TKNTumParcaListesi::ListeGuncelle()
         hucre->setText(liste[i]->getParcaModeli());
         ui->tableWidget->setItem(i, 3, hucre);
 
-        hucre = new QTableWidgetItem();
-        switch (liste[i]->getParcaEvetHayir()){
-        case PTEvet:
-            hucre->setText("Var");
-            break;
-        default:
-            hucre->setText("Yok");}
-        ui->tableWidget->setItem(i, 4, hucre);
-
-        hucre = new QTableWidgetItem();
-        switch (liste[i]->getParcaVarYok()){
-        case PTVar:
-            hucre->setText("Var");
-            break;
-        default:
-            hucre->setText("Yok");}
-        ui->tableWidget->setItem(i, 5, hucre);
-
         QPushButton *silmeButonu = new QPushButton(this);
         silmeButonu->setText(tr("Parçayı Sil"));
-        ui->tableWidget->setCellWidget(i, 6, silmeButonu);
+        ui->tableWidget->setCellWidget(i, 4, silmeButonu);
 
         auto veri_i = liste[i];
 
@@ -112,7 +93,7 @@ void TKNTumParcaListesi::ListeGuncelle()
             auto cevap = QMessageBox::question(
                 nullptr,
                 tr("Silme Onayı"),
-                tr("%1 isimli ilacı simek istediğinize emin misiniz?").arg(veri_i->getParcaMarkasi()));
+                tr("%1 isimli parçayı silmek istediğinize emin misiniz?").arg(veri_i->getParcaMarkasi()));
             if (cevap == QMessageBox::Yes) {
                 TKNGenelVeriYoneticisi::sec().getParcaBilgisi().sil(veri_i->getId());
                 QMessageBox::information(nullptr,

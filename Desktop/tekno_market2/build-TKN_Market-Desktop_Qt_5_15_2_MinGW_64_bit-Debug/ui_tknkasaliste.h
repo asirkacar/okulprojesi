@@ -64,6 +64,7 @@ public:
         if (TKNKasaListe->objectName().isEmpty())
             TKNKasaListe->setObjectName(QString::fromUtf8("TKNKasaListe"));
         TKNKasaListe->resize(755, 475);
+        TKNKasaListe->setStyleSheet(QString::fromUtf8(""));
         verticalLayout_4 = new QVBoxLayout(TKNKasaListe);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         groupBox = new QGroupBox(TKNKasaListe);
@@ -212,6 +213,7 @@ public:
         QObject::connect(rbParcaModelIleBiten, SIGNAL(clicked()), TKNKasaListe, SLOT(Ara()));
         QObject::connect(rbParcaModelIleBaslayan, SIGNAL(clicked()), TKNKasaListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNKasaListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNKasaListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNKasaListe);
     } // setupUi

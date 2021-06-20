@@ -30,7 +30,8 @@ void TKNMonitorListe::ListeGuncelle()
     ui->tableWidget->setColumnCount(13);
     QStringList basliklar;
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Monitör Tipi")
-              << tr("Monitör Bağlantısı") << tr("Yenileme Hızı") << tr("Ekran Boyutu") << tr("Çözünürlük") << tr("İzleme Açısı") << tr("Vsa");
+              << tr("Monitör Bağlantısı") << tr("Yenileme Hızı") << tr("Ekran Boyutu") << tr("Çözünürlük") << tr("İzleme Açısı")
+              << tr("Vsa")<< tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){

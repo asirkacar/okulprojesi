@@ -30,7 +30,7 @@ void TKNKlavyeListe::ListeGuncelle()
     ui->tableWidget->setColumnCount(9);
     QStringList basliklar;
     basliklar << tr("Parça ID") << tr("Parça Türü") << tr("Parça Markası") << tr("Parça Modeli") << tr("Klavye Düzeni")
-              << tr("Klavye Bağlantısı") << tr("Bağllantı Özellikleri");
+              << tr("Klavye Bağlantısı") << tr("Bağllantı Özellikleri")<< tr("Parçayı Sil") << tr("Parçayı Düzelt");
     ui->tableWidget->setHorizontalHeaderLabels(basliklar);
 
     for(int i=0; i<liste.length(); i++){
