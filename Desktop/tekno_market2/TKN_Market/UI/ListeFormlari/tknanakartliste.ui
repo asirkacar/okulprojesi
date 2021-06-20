@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1031</width>
+    <width>1181</width>
     <height>619</height>
    </rect>
   </property>
@@ -182,11 +182,11 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>935</x>
+     <x>1134</x>
      <y>134</y>
     </hint>
     <hint type="destinationlabel">
-     <x>944</x>
+     <x>1134</x>
      <y>86</y>
     </hint>
    </hints>
@@ -214,7 +214,7 @@
    <slot>Ara()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>217</x>
+     <x>230</x>
      <y>135</y>
     </hint>
     <hint type="destinationlabel">
@@ -230,7 +230,7 @@
    <slot>Ara()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>358</x>
+     <x>412</x>
      <y>132</y>
     </hint>
     <hint type="destinationlabel">
@@ -246,7 +246,7 @@
    <slot>Ara()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>530</x>
+     <x>644</x>
      <y>136</y>
     </hint>
     <hint type="destinationlabel">
@@ -262,7 +262,7 @@
    <slot>Ara()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>654</x>
+     <x>826</x>
      <y>132</y>
     </hint>
     <hint type="destinationlabel">
@@ -278,7 +278,7 @@
    <slot>Ara()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>793</x>
+     <x>998</x>
      <y>142</y>
     </hint>
     <hint type="destinationlabel">
@@ -310,7 +310,7 @@
    <slot>Ara()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>547</x>
+     <x>673</x>
      <y>75</y>
     </hint>
     <hint type="destinationlabel">

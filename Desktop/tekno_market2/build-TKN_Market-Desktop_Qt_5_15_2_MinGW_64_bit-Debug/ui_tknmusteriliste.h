@@ -42,11 +42,6 @@ public:
     QRadioButton *rbMusteriAdIleBaslayan;
     QRadioButton *rbMusteriAdIleBiten;
     QRadioButton *rbMusteriAdIceren;
-    QGroupBox *groupBox_3;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *label_2;
-    QLineEdit *leMusteriIdDegeri;
     QVBoxLayout *verticalLayout_3;
     QPushButton *pushButton;
     QCheckBox *cbYazarkenAra;
@@ -113,28 +108,6 @@ public:
 
         horizontalLayout_7->addWidget(groupBox_2);
 
-        groupBox_3 = new QGroupBox(groupBox);
-        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        verticalLayout_2 = new QVBoxLayout(groupBox_3);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label_2 = new QLabel(groupBox_3);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        horizontalLayout_4->addWidget(label_2);
-
-        leMusteriIdDegeri = new QLineEdit(groupBox_3);
-        leMusteriIdDegeri->setObjectName(QString::fromUtf8("leMusteriIdDegeri"));
-
-        horizontalLayout_4->addWidget(leMusteriIdDegeri);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_4);
-
-
-        horizontalLayout_7->addWidget(groupBox_3);
-
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         pushButton = new QPushButton(groupBox);
@@ -165,7 +138,6 @@ public:
 
 #if QT_CONFIG(shortcut)
         label->setBuddy(leMusteriAdDegeri);
-        label_2->setBuddy(leMusteriAdDegeri);
 #endif // QT_CONFIG(shortcut)
 
         retranslateUi(TKNMusteriListe);
@@ -174,8 +146,8 @@ public:
         QObject::connect(rbMusteriAdIleBiten, SIGNAL(clicked()), TKNMusteriListe, SLOT(Ara()));
         QObject::connect(rbMusteriAdIleBaslayan, SIGNAL(clicked()), TKNMusteriListe, SLOT(Ara()));
         QObject::connect(leMusteriAdDegeri, SIGNAL(textChanged(QString)), TKNMusteriListe, SLOT(Ara()));
-        QObject::connect(leMusteriIdDegeri, SIGNAL(textChanged(QString)), TKNMusteriListe, SLOT(Ara()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), TKNMusteriListe, SLOT(accept()));
+        QObject::connect(pushButton, SIGNAL(clicked()), TKNMusteriListe, SLOT(Ara()));
 
         QMetaObject::connectSlotsByName(TKNMusteriListe);
     } // setupUi
@@ -190,8 +162,6 @@ public:
         rbMusteriAdIleBaslayan->setText(QCoreApplication::translate("TKNMusteriListe", "\304\260le Ba\305\237layan", nullptr));
         rbMusteriAdIleBiten->setText(QCoreApplication::translate("TKNMusteriListe", "\304\260le Biten", nullptr));
         rbMusteriAdIceren->setText(QCoreApplication::translate("TKNMusteriListe", "\304\260\303\247eren", nullptr));
-        groupBox_3->setTitle(QCoreApplication::translate("TKNMusteriListe", "Id \304\260le Arama", nullptr));
-        label_2->setText(QCoreApplication::translate("TKNMusteriListe", "De\304\237er", nullptr));
         pushButton->setText(QCoreApplication::translate("TKNMusteriListe", "Ara", nullptr));
         cbYazarkenAra->setText(QCoreApplication::translate("TKNMusteriListe", "Yazarken Ara", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TKNMusteriListe", "Kapat", nullptr));

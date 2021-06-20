@@ -63,7 +63,7 @@ public:
     {
         if (TKNAnakartListe->objectName().isEmpty())
             TKNAnakartListe->setObjectName(QString::fromUtf8("TKNAnakartListe"));
-        TKNAnakartListe->resize(1031, 619);
+        TKNAnakartListe->resize(1181, 619);
         verticalLayout_4 = new QVBoxLayout(TKNAnakartListe);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         groupBox = new QGroupBox(TKNAnakartListe);
